@@ -30,7 +30,7 @@ _ide_helper_models.php
 out
 librenms_theme
 
-rrd/
+rrd/*
 storage/logs/
 
 config.php
