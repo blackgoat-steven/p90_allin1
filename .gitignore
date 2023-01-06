@@ -35,3 +35,4 @@ storage/logs/
 
 config.php
 .env
+html/.htaccess
