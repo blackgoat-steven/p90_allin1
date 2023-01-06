@@ -33,6 +33,6 @@ librenms_theme
 rrd/*
 storage/logs/
 
-config.php
-.env
-html/.htaccess
+./config.php
+./env
+/html/.htaccess
