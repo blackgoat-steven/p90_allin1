@@ -24,7 +24,7 @@
     <div class="row">
         <div class="col-md-6">
 
-            <h3>@lang('IIMS365 為基於 Librenms 核心, 強化開發的自動探索網路監控系統')</h3>
+            <h3>@lang('P90 為基於 Librenms 核心, 強化開發的自動探索網路監控系統')</h3>
             <table class='table table-condensed table-hover'>
                 <tr>
                     <td><b>@lang('Version')</b></td>
@@ -55,10 +55,10 @@
 
             <p>
 
-            <h3>IIMS365 (v20200910)</h3>
-            遠傳公有雲與私有雲監測服務
+            <h3>P90</h3>
+            P90 監測服務
             <br>
-              <a href="https://www.fetnet.net/enterprise/index.html">@lang('Web site')</a>
+              <a href="https://www.findcompany.com.tw/%E9%BB%91%E7%BE%8A%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8">@lang('Web site')</a>
           </p>
 <!--
           <h3>@lang('Contributors')</h3>
