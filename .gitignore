@@ -1,7 +1,5 @@
 # Ignore all dotfiles #
 #######################
-.*
-!/.gitignore
 !/.editorconfig
 !/.scrutinizer.yml
 !/.travis.yml
@@ -17,18 +15,10 @@ __pycache__
 *.pyc
 *.swp
 Thumbs.db
-config.php
-html/css/custom/*
-html/images/custom/*
-html/plugins/*
-!html/plugins/Test/
-includes/custom/*
 junk
 nbproject
 patches
 !/lib/yaml
-/vendor
-/node_modules
 npm-debug.log
 yarn-error.log
 composer.phar
@@ -42,3 +32,6 @@ librenms_theme
 
 rrd/
 storage/logs/
+
+config.php
+.env
