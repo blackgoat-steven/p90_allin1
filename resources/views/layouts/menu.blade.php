@@ -227,6 +227,11 @@
                            data-toggle="dropdown"><i class="fa fa-cube fa-fw fa-lg"
                                                      aria-hidden="true"></i> <span
                                 class="hidden-sm">@lang('資產')</span></a>
+
+                    <a href="{{ url('devices/') }}" class="dropdown-toggle" data-hover="dropdown"
+                       data-toggle="dropdown"><i class="fa fa-server fa-fw fa-lg fa-nav-icons hidden-md"
+                                                 aria-hidden="true"></i> <span class="hidden-sm">@lang('Devices')</span></a>
+
                         <ul class="dropdown-menu">
                                <!-- <li role="presentation" class="divider"></li>-->
                         <li><a href="{{ url('inventory') }}"><i class="fa fa-cube fa-fw fa-lg" aria-hidden="true"></i> Inventory</a></li>
