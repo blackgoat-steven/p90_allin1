@@ -25,9 +25,9 @@ foreach (dbFetchRows('SELECT * FROM `hrDevice` WHERE `device_id` = ? ORDER BY `h
         $graph_array_zoom['height'] = '150';
         $graph_array_zoom['width']  = '400';
 
-        $mini_graph = overlib_link($proc_url, generate_lazy_graph_tag($graph_array), generate_graph_tag($graph_array_zoom), null);
+        //$mini_graph = overlib_link($proc_url, generate_lazy_graph_tag($graph_array), generate_graph_tag($graph_array_zoom), null);
 
-        //echo '<td>'.$mini_graph.'</td>';
+        echo '<td>'.$mini_graph.'</td>';
     } elseif ($hrdevice['hrDeviceType'] == 'hrDeviceNetwork') {
         $int       = str_replace('network interface ', '', $hrdevice['hrDeviceDescr']);
         $interface = dbFetchRow('SELECT * FROM ports WHERE device_id = ? AND ifDescr = ?', array($device['device_id'], $int));
@@ -48,7 +48,7 @@ foreach (dbFetchRows('SELECT * FROM `hrDevice` WHERE `device_id` = ? ORDER BY `h
             // FIXME click on graph should also link to port, but can't use generate_port_link here...
             $mini_graph = overlib_link(generate_port_url($interface), generate_lazy_graph_tag($graph_array), generate_graph_tag($graph_array_zoom), null);
 
-            //echo "<td>$mini_graph</td>";
+            echo "<td>$mini_graph</td>";
         } else {
             echo '<td>'.stripslashes($hrdevice['hrDeviceDescr']).'</td>';
             echo '<td></td>';
