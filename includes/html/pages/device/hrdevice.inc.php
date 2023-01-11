@@ -46,7 +46,7 @@ foreach (dbFetchRows('SELECT * FROM `hrDevice` WHERE `device_id` = ? ORDER BY `h
             $graph_array_zoom['width']  = '400';
 
             // FIXME click on graph should also link to port, but can't use generate_port_link here...
-            $mini_graph = overlib_link(generate_port_url($interface), generate_lazy_graph_tag($graph_array), generate_graph_tag($graph_array_zoom), null);
+            //$mini_graph = overlib_link(generate_port_url($interface), generate_lazy_graph_tag($graph_array), generate_graph_tag($graph_array_zoom), null);
 
             echo "<td>$mini_graph</td>";
         } else {
