@@ -13,8 +13,8 @@ foreach (dbFetchRows('SELECT * FROM `hrDevice` WHERE `device_id` = ? ORDER BY `h
         $proc_popup  = "onmouseover=\"return overlib('<div class=list-large>".$device['hostname'].' - '.$hrdevice['hrDeviceDescr'];
         $proc_popup .= "</div><img src=\'graph.php?id=" . $proc_id . '&amp;type=processor_usage&amp;from=' . \LibreNMS\Config::get('time.month') . '&amp;to=' . \LibreNMS\Config::get('time.now') . "&amp;width=400&amp;height=125\'>";
         $proc_popup .= "', RIGHT" . \LibreNMS\Config::get('overlib_defaults') . ');" onmouseout="return nd();"';
-        echo "<td><a href='$proc_url' $proc_popup>".$hrdevice['hrDeviceDescr'].'</a></td>';
-
+        //echo "<td><a href='$proc_url' $proc_popup>".$hrdevice['hrDeviceDescr'].'</a></td>';
+		echo "<td>".$hrdevice['hrDeviceDescr'].'</td>';
         $graph_array['height']      = '20';
         $graph_array['width']       = '100';
         $graph_array['to'] = \LibreNMS\Config::get('time.now');
@@ -27,7 +27,7 @@ foreach (dbFetchRows('SELECT * FROM `hrDevice` WHERE `device_id` = ? ORDER BY `h
 
         $mini_graph = overlib_link($proc_url, generate_lazy_graph_tag($graph_array), generate_graph_tag($graph_array_zoom), null);
 
-        echo '<td>'.$mini_graph.'</td>';
+        //echo '<td>'.$mini_graph.'</td>';
     } elseif ($hrdevice['hrDeviceType'] == 'hrDeviceNetwork') {
         $int       = str_replace('network interface ', '', $hrdevice['hrDeviceDescr']);
         $interface = dbFetchRow('SELECT * FROM ports WHERE device_id = ? AND ifDescr = ?', array($device['device_id'], $int));
@@ -48,7 +48,7 @@ foreach (dbFetchRows('SELECT * FROM `hrDevice` WHERE `device_id` = ? ORDER BY `h
             // FIXME click on graph should also link to port, but can't use generate_port_link here...
             $mini_graph = overlib_link(generate_port_url($interface), generate_lazy_graph_tag($graph_array), generate_graph_tag($graph_array_zoom), null);
 
-            echo "<td>$mini_graph</td>";
+            //echo "<td>$mini_graph</td>";
         } else {
             echo '<td>'.stripslashes($hrdevice['hrDeviceDescr']).'</td>';
             echo '<td></td>';
