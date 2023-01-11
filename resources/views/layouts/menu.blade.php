@@ -224,10 +224,9 @@
 {{-- config --}}
                     <li class="dropdown">
                         <a href="{{ url('routing') }}" class="dropdown-toggle" data-hover="dropdown"
-                           data-toggle="dropdown"><i class="fa fa-cube fa-fw fa-lg"
+                           data-toggle="dropdown"><i class="fa fa-cube fa-fw fa-lg fa-nav-icons hidden-md"
                                                      aria-hidden="true"></i> <span
                                 class="hidden-sm">@lang('資產')</span></a>
-
 
                         <ul class="dropdown-menu">
                                <!-- <li role="presentation" class="divider"></li>-->
